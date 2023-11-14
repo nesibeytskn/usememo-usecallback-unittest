@@ -6,7 +6,7 @@ const PersonCard = ({personInfo, setTitle, setAge}) => {
   const {email, first_name, id, last_name, gender, photo} = personInfo;
 
   return (
-    <TouchableOpacity style={styles.mainContainer} onPress={() => setAge(id+10)}>
+    <TouchableOpacity testID='personContainer' style={styles.mainContainer} onPress={() => setAge(id+10)}>
       <View style={styles.leftSide}>
         <View style={styles.imageContainer}>
           <Image
@@ -17,7 +17,7 @@ const PersonCard = ({personInfo, setTitle, setAge}) => {
           />
         </View>
         <View style={styles.infoConatainer}>
-          <Text onPress={() => setTitle(first_name)} style={styles.name}>
+          <Text testID='nameBar' onPress={() => setTitle(first_name)} style={styles.name}>
             {first_name + '  ' + last_name}
           </Text>
           <Text style={styles.job}>{email}</Text>

@@ -21,9 +21,10 @@ const HomeScreen = () => {
   };
   const cachedSetAge = useMemo(() => handleSetAge(), [age]);
   return (
-    <View style={styles.mainContainer}>
+    <View  style={styles.mainContainer}>
       <View style={styles.headerContainer}>
         <Text
+        testID='appTitle'
           style={[styles.title, {color: isGreen ? '#16c784' : 'white'}]}
           onPress={() => setIsGreen(!isGreen)}>
           {title}
